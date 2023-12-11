@@ -24,18 +24,28 @@ export default function Nav() {
   const [isOpen, setOpen] = useState(false);
   const matches = useMediaQuery("(min-width:1280px)");
   return (
-    <nav className="relative mx-4 py-4 mb-24 flex justify-between items-center ">
-      <img
-        src="/logo.png"
-        alt="Method jiu-jitsu & grappling logop"
-        width={150}
-      />
+    <nav className="relative xl:mx-36 mx-8 py-4 flex justify-between items-center ">
+      <a href="/">
+        <img
+          src="/logo.png"
+          alt="Method jiu-jitsu & grappling logop"
+          width={150}
+        />
+      </a>
       {matches && (
         <div className="flex gap-12 items-center">
-          <a className="cursor-pointer text-white">HOME</a>
-          <a className="cursor-pointer text-white">BRAZILIAN JIU-JITSU</a>
-          <a className="cursor-pointer text-white">HORARIO Y PRECIOS</a>
-          <a className="cursor-pointer text-white">SOBRE NOSOTROS</a>
+          <a href="/bjj" className="cursor-pointer text-white font-bold">
+            BRAZILIAN JIU-JITSU
+          </a>
+          <a href="/grappling" className="cursor-pointer text-white font-bold">
+            GRAPPLING
+          </a>
+          <a href="/horario" className="cursor-pointer text-white font-bold">
+            HORARIO Y PRECIOS
+          </a>
+          <a href="/nosotros" className="cursor-pointer text-white font-bold">
+            SOBRE NOSOTROS
+          </a>
         </div>
       )}
       {!matches && (
@@ -51,16 +61,28 @@ export default function Nav() {
             initial="hidden"
             className="flex flex-col gap-24 text-lg items-center"
           >
-            <motion.a href="#" variants={itemMotion} className="cursor-pointer">
+            <motion.a href="/" variants={itemMotion} className="cursor-pointer">
               HOME
             </motion.a>
-            <motion.a href="#" variants={itemMotion} className="cursor-pointer">
+            <motion.a
+              href="/bjj"
+              variants={itemMotion}
+              className="cursor-pointer"
+            >
               BRAZILIAN JIU-JITSU
             </motion.a>
-            <motion.a href="#" variants={itemMotion} className="cursor-pointer">
+            <motion.a
+              href="/horario"
+              variants={itemMotion}
+              className="cursor-pointer"
+            >
               HORARIO Y PRECIOS
             </motion.a>
-            <motion.a href="#" variants={itemMotion} className="cursor-pointer">
+            <motion.a
+              href="/nosotros"
+              variants={itemMotion}
+              className="cursor-pointer"
+            >
               SOBRE NOSOTROS
             </motion.a>
           </motion.div>
