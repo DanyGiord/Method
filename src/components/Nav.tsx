@@ -61,27 +61,31 @@ export default function Nav() {
             initial="hidden"
             className="flex flex-col gap-24 text-lg items-center"
           >
-            <motion.a href="/" variants={itemMotion} className="cursor-pointer">
-              HOME
-            </motion.a>
             <motion.a
               href="/bjj"
               variants={itemMotion}
-              className="cursor-pointer"
+              className="cursor-pointer font-bold"
             >
               BRAZILIAN JIU-JITSU
             </motion.a>
             <motion.a
+              href="/grappling"
+              variants={itemMotion}
+              className="cursor-pointer font-bold"
+            >
+              GRAPPLING
+            </motion.a>
+            <motion.a
               href="/horario"
               variants={itemMotion}
-              className="cursor-pointer"
+              className="cursor-pointer font-bold"
             >
               HORARIO Y PRECIOS
             </motion.a>
             <motion.a
               href="/nosotros"
               variants={itemMotion}
-              className="cursor-pointer"
+              className="cursor-pointer font-bold"
             >
               SOBRE NOSOTROS
             </motion.a>
