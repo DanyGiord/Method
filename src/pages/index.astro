@@ -3,14 +3,42 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Method">
-  <main class="container xl:mx-36 mx-8">
-    <h1 class="text-white">
-      Reserva tu primera introducción al jiu jitsu brasileño
-    </h1>
-    <div class="absolute top-1/2 right-36 flex flex-col gap-10">
+  <!-- <main class="container xl:mx-36 mx-8">
+    <div class="title-container flex items-center justify-center">
+      <h1 class="text-white text-5xl">
+        Reserva tu primera introducción al Jiu Jitsu brasileño
+      </h1>
+    </div> -->
+    <section class="absolute w-full h-screen overflow-hidden z-0">
+      <!-- Video Background -->
+      <video 
+        autoplay 
+        muted 
+        loop 
+        playsinline 
+        class="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/public/bjj-training.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    
+      <!-- Overlay (dark gradient to make text readable) -->
+      <div class="absolute inset-0 bg-black/50"></div>
+    
+      <!-- Foreground Content -->
+      <div class="relative z-10 flex items-center justify-center h-full text-center text-white">
+        <div>
+          <h1 class="text-5xl font-bold mb-4">
+            Entrena. Lucha. Crece.</h1>
+          <p class="text-lg mb-6">Reserva tu primera introducción al Jiu Jitsu brasileño.</p>
+          <a href="#contact" class="px-6 py-3 bg-white text-black font-semibold rounded-md">Reserva</a>
+        </div>
+      </div>
+    </section>
+    <!-- <div class="absolute top-1/2 right-36 flex flex-col gap-10">
       <a href="#" class="text-white text-xl">Socials</a>
       <a href="#" class="text-white text-xl">Socials</a>
       <a href="#" class="text-white text-xl">Socials</a>
-    </div>
+    </div> -->
   </main>
 </Layout>

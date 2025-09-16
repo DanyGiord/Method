@@ -19,12 +19,12 @@ const itemMotion = {
   visible: { opacity: 1, x: 0 },
   hidden: { opacity: 0, x: -100 },
 };
-
+// xl:mx-36 mx-8 
 export default function Nav() {
   const [isOpen, setOpen] = useState(false);
   const matches = useMediaQuery("(min-width:1280px)");
   return (
-    <nav className="relative xl:mx-36 mx-8 py-4 flex justify-between items-center ">
+    <nav className="fixed z-10 py-4 xl:px-36 px-8 w-full left-0 flex justify-between items-center bg-white/5 backdrop-blur-md">
       <a href="/">
         <img
           src="/logo.png"
