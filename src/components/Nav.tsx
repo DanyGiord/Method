@@ -19,7 +19,6 @@ const itemMotion = {
   visible: { opacity: 1, x: 0 },
   hidden: { opacity: 0, x: -100 },
 };
-// xl:mx-36 mx-8 
 export default function Nav() {
   const [isOpen, setOpen] = useState(false);
   const matches = useMediaQuery("(min-width:1280px)");
