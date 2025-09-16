@@ -1,0 +1,39 @@
+{
+	"version": 3,
+	"routes": [
+		{
+			"src": "^/_astro/(.*)$",
+			"headers": {
+				"cache-control": "public, max-age=31536000, immutable"
+			},
+			"continue": true
+		},
+		{
+			"handle": "filesystem"
+		},
+		{
+			"src": "^\\/_image$",
+			"dest": "render"
+		},
+		{
+			"src": "^\\/bjj\\/?$",
+			"dest": "render"
+		},
+		{
+			"src": "^\\/grappling\\/?$",
+			"dest": "render"
+		},
+		{
+			"src": "^\\/horario\\/?$",
+			"dest": "render"
+		},
+		{
+			"src": "^\\/nosotros\\/?$",
+			"dest": "render"
+		},
+		{
+			"src": "^\\/$",
+			"dest": "render"
+		}
+	]
+}
