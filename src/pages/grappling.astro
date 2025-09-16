@@ -3,5 +3,16 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Grappling">
-  <h1>Grappling</h1>
+  <section
+  class="h-screen bg-cover bg-center bg-no-repeat"
+  style={{ backgroundImage: "url('/grappling_1.webp')" }}
+>
+  <!-- Overlay (dark gradient to make text readable) -->
+  <div class="absolute inset-0 bg-black/50"></div>
+  <div class="h-full w-full flex items-center justify-center bg-black/30">
+    <h1 class="text-white xl:text-9xl text-7xl font-bold text-center z-10">
+      Grappling
+    </h1>
+  </div>
+</section>
 </Layout>

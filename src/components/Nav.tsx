@@ -23,7 +23,7 @@ export default function Nav() {
   const [isOpen, setOpen] = useState(false);
   const matches = useMediaQuery("(min-width:1280px)");
   return (
-    <nav className="fixed z-10 py-4 xl:px-36 px-8 w-full left-0 flex justify-between items-center bg-white/5 backdrop-blur-md">
+    <nav className="fixed z-20 py-4 xl:px-36 px-8 w-full left-0 flex justify-between items-center bg-white/5 backdrop-blur-md">
       <a href="/">
         <img
           src="/logo.png"
@@ -32,33 +32,36 @@ export default function Nav() {
         />
       </a>
       {matches && (
-        <div className="flex gap-12 items-center">
-          <a href="/bjj" className="cursor-pointer text-white font-bold">
+        <div className="flex gap-12 items-center text-white font-bold">
+          <a href="/bjj" className="cursor-pointer">
             BRAZILIAN JIU-JITSU
           </a>
-          <a href="/grappling" className="cursor-pointer text-white font-bold">
+          <a href="/grappling" className="cursor-pointer">
             GRAPPLING
           </a>
-          <a href="/horario" className="cursor-pointer text-white font-bold">
+           <a href="/wrestling" className="cursor-pointer">
+            WRESTLING
+          </a>
+          <a href="/horario" className="cursor-pointer">
             HORARIO Y PRECIOS
           </a>
-          <a href="/nosotros" className="cursor-pointer text-white font-bold">
+          <a href="/nosotros" className="cursor-pointer">
             SOBRE NOSOTROS
           </a>
         </div>
       )}
       {!matches && (
         <div className="z-50">
-          <Hamburger toggled={isOpen} toggle={setOpen} color="red" />
+          <Hamburger toggled={isOpen} toggle={setOpen} color={isOpen ? "black" : "white"} />
         </div>
       )}
       {isOpen && !matches && (
-        <div className="fixed flex bg-white bottom-0 left-0 w-full h-screen items-center justify-center">
+        <div className="fixed flex top-0 bg-white left-0 w-full h-screen items-center justify-center">
           <motion.div
             variants={navMotion}
             animate="visible"
             initial="hidden"
-            className="flex flex-col gap-24 text-lg items-center"
+            className="flex flex-col gap-24 text-2xl items-center"
           >
             <motion.a
               href="/bjj"
@@ -74,6 +77,13 @@ export default function Nav() {
             >
               GRAPPLING
             </motion.a>
+              <motion.a
+              href="/wrestling"
+              variants={itemMotion}
+              className="cursor-pointer font-bold"
+            >
+              WRESTLING
+            </motion.a>
             <motion.a
               href="/horario"
               variants={itemMotion}
@@ -88,6 +98,20 @@ export default function Nav() {
             >
               SOBRE NOSOTROS
             </motion.a>
+             <motion.div
+        variants={itemMotion}
+        className="flex gap-8 mt-12"
+      >
+        <a href="https://instagram.com/method_bcn" target="_blank" rel="noopener noreferrer">
+          <img src="/instagram.svg" alt="Instagram" className="w-8 h-8" />
+        </a>
+        <a href="https://youtube.com/yourchannel" target="_blank" rel="noopener noreferrer">
+          <img src="/youtube.svg" alt="YouTube" className="w-8 h-8" />
+        </a>
+        <a href="https://wa.me/yourphonenumber" target="_blank" rel="noopener noreferrer">
+          <img src="/whatsapp.svg" alt="WhatsApp" className="w-8 h-8" />
+        </a>
+      </motion.div>
           </motion.div>
         </div>
       )}
