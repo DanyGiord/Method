@@ -1,4 +1,7 @@
 {
+   "engines": {
+    "node": "22.x"
+  },
   "name": "pale-parsec",
   "type": "module",
   "version": "0.0.1",
