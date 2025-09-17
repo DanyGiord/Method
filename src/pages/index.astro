@@ -3,29 +3,30 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Method">
-  <!-- <main class="container xl:mx-36 mx-8">
-    <div class="title-container flex items-center justify-center">
-      <h1 class="text-white text-5xl">
-        Reserva tu primera introducción al Jiu Jitsu brasileño
-      </h1>
-    </div> -->
-    <section class="absolute w-full h-screen overflow-hidden z-0">
-      <!-- Video Background -->
-      <video 
-        autoplay 
-        muted 
-        loop 
-        playsinline 
-        class="absolute inset-0 w-full h-full object-cover"
-      >
-        <source src="/bjj-training.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <!-- Overlay (dark gradient to make text readable) -->
-      <div class="absolute inset-0 bg-black/50"></div>
-    </section>
+  <section class="absolute w-full h-screen overflow-hidden z-0">
+    <!-- Video Background -->
+    <video
+      autoplay
+      muted
+      loop
+      playsinline
+      class="absolute inset-0 w-full h-full object-cover"
+    >
+      <source src="/bjj-training.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <!-- Overlay (dark gradient to make text readable) -->
+    <div class="absolute inset-0 bg-black/50"></div>
+     <!-- Scroll down button -->
+    <div class="container_mouse">
+      <span class="mouse-btn">
+        <span class="mouse-scroll"></span>
+      </span>
+    </div>
+  </section>
+</Layout>
 
-    <!-- <section class=" w-full h-screen overflow-hidden z-0 bg-white">
+<!-- <section class=" w-full h-screen overflow-hidden z-0 bg-white">
       <div class="relative z-10 flex items-center justify-center h-full text-center text-white">
         <div>
           <h1 class="xl:text-8xl text-6xl font-bold mb-4">
@@ -35,5 +36,3 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </div>
     </section> -->
-  </main>
-</Layout>

@@ -2,16 +2,23 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Brazilian Jiu Jitsu">  <section
-  class="h-screen bg-cover bg-center bg-no-repeat"
-  style={{ backgroundImage: "url('/bjj.webp')" }}
->
- <!-- Overlay (dark gradient to make text readable) -->
-  <div class="absolute inset-0 bg-black/50"></div>
-  <div class="h-full w-full flex items-center justify-center bg-black/30">
-    <h1 class="text-white xl:text-9xl text-7xl font-bold text-center z-10">
-      BRAZILIAN JIU JITSU
-    </h1>
-  </div>
-</section>
+<Layout title="Brazilian Jiu Jitsu">
+  <section
+    class="h-screen bg-cover bg-center bg-no-repeat"
+    style={{ backgroundImage: "url('/bjj.webp')" }}
+  >
+    <!-- Overlay (dark gradient to make text readable) -->
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="h-full w-full flex items-center justify-center bg-black/30">
+      <h1 class="text-white xl:text-9xl text-6xl font-bold text-center z-10">
+        BRAZILIAN JIU JITSU
+      </h1>
+    </div>
+    <!-- Scroll down button -->
+    <div class="container_mouse">
+      <span class="mouse-btn">
+        <span class="mouse-scroll"></span>
+      </span>
+    </div>
+  </section>
 </Layout>
