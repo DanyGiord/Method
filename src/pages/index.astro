@@ -32,7 +32,6 @@ import TeamMedals from "../components/TeamMedals.tsx";
   </section>
 
   <!-- Text section UNDER the video -->
-  <Layout title="Method">
     <AnimatedSection
       className="relative z-10 flex items-center justify-center h-screen text-center text-white bg-[#1b1b1b]"
       client:visible
@@ -52,8 +51,6 @@ import TeamMedals from "../components/TeamMedals.tsx";
         </a>
       </div>
     </AnimatedSection>
-  </Layout>
-  <Layout title="Carousel">
     <div class="p-10 bg-[#f9f9f9] flex justify-center">
       <AnimatedCarousel
         client:load
@@ -94,8 +91,5 @@ import TeamMedals from "../components/TeamMedals.tsx";
         ]}
       />
     </div>
-  </Layout>
-  <Layout title="Method">
     <TeamMedals client:load />
-  </Layout>
 </Layout>

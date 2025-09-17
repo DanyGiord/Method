@@ -1,30 +1,39 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import AnimatedTitle from "../components/AnimatedTitle.tsx";
+import BjjTextSection from "../components/BjjTextSection";
 ---
 
 <Layout title="Brazilian Jiu Jitsu">
+  <!-- Hero Section -->
   <section
-    class="h-screen bg-cover bg-center bg-no-repeat"
+    class="relative h-screen bg-cover bg-center bg-no-repeat"
     style={{ backgroundImage: "url('/bjj.webp')" }}
   >
-    <!-- Overlay (dark gradient to make text readable) -->
+    <!-- Overlay -->
     <div class="absolute inset-0 bg-black/50"></div>
 
     <!-- Animated Title -->
-    <div class="h-full w-full flex items-center justify-center bg-black/30">
+    <div
+      class="relative h-full w-full flex items-center justify-center bg-black/30"
+    >
       <AnimatedTitle
         text="Brazilian Jiu Jitsu"
         className="text-white xl:text-9xl text-7xl mx-20"
         client:load
       />
     </div>
-    
+
     <!-- Scroll down button -->
-    <div class="container_mouse">
-      <span class="mouse-btn">
-        <span class="mouse-scroll"></span>
-      </span>
+    <div class="absolute bottom-10 w-full flex justify-center">
+      <div class="container_mouse">
+        <span class="mouse-btn">
+          <span class="mouse-scroll"></span>
+        </span>
+      </div>
     </div>
   </section>
+
+  <!-- BJJ Text Section -->
+  <BjjTextSection client:load />
 </Layout>
