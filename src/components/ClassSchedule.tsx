@@ -125,13 +125,13 @@ export default function ClassSchedule() {
   return (
     <section className="py-28 max-w-8xl mx-auto px-4">
       <h2 className="text-4xl font-bold text-center mb-8 text-white">
-        Horario
+        HORARIOS
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-7 gap-6">
         {schedule.map((day) => (
           <div
             key={day.day}
-            className="bg-gray-900 text-white rounded-2xl p-6 flex flex-col shadow-lg"
+            className="bg-[#212121] text-white rounded-2xl p-6 flex flex-col shadow-lg"
           >
             <h3 className="text-2xl font-semibold text-center mb-4">
               {day.day}
@@ -142,7 +142,7 @@ export default function ClassSchedule() {
                   key={idx}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-gray-800 hover:bg-gray-700 p-4 rounded-xl text-left text-base cursor-pointer shadow-md"
+                  className="bg-[#171717] hover:bg-gray-700 p-6 rounded-xl text-left text-base cursor-pointer shadow-md"
                   onClick={() => setSelectedClass(cls)}
                 >
                   <span className="font-bold text-lg">{cls.name}</span> <br />
@@ -169,7 +169,7 @@ export default function ClassSchedule() {
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.8 }}
-              className="bg-gray-900 text-white p-6 rounded-lg max-w-md w-full"
+              className="bg-[#171717] text-white p-6 rounded-lg max-w-md w-full"
             >
               <h3 className="text-2xl font-bold mb-2">{selectedClass.name}</h3>
               <p className="mb-1">
@@ -186,7 +186,7 @@ export default function ClassSchedule() {
                 {getDescription(selectedClass.name)}
               </p>
               <button
-                className="mt-4 px-4 py-2 bg-red-600 rounded hover:bg-red-700"
+                className="mt-4 px-4 py-2 bg-[#303030] hover:bg-#303030"
                 onClick={() => setSelectedClass(null)}
               >
                 Cerrar

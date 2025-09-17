@@ -43,7 +43,7 @@ export default function TeamMedals() {
   useEffect(() => {
     if (!started) return;
 
-    const duration = 2000; // 2s
+    const duration = 6000; // 6s
     const startTime = performance.now();
 
     function animate(now: number) {
