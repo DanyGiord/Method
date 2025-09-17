@@ -1,9 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import AnimatedSection from "../components/AnimatedSection.tsx";
+import AnimatedCarousel from "../components/AnimatedCarousel.tsx";
 ---
 
 <Layout title="Method">
-  <section class="absolute w-full h-screen overflow-hidden z-0">
+  <!-- Hero with video -->
+  <section class="relative w-full h-screen overflow-hidden z-0">
     <!-- Video Background -->
     <video
       autoplay
@@ -15,24 +18,80 @@ import Layout from "../layouts/Layout.astro";
       <source src="/bjj-training.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
-    <!-- Overlay (dark gradient to make text readable) -->
+
+    <!-- Overlay -->
     <div class="absolute inset-0 bg-black/50"></div>
-     <!-- Scroll down button -->
+
+    <!-- Scroll down button -->
     <div class="container_mouse">
       <span class="mouse-btn">
         <span class="mouse-scroll"></span>
       </span>
     </div>
   </section>
-</Layout>
 
-<!-- <section class=" w-full h-screen overflow-hidden z-0 bg-white">
-      <div class="relative z-10 flex items-center justify-center h-full text-center text-white">
-        <div>
-          <h1 class="xl:text-8xl text-6xl font-bold mb-4">
-            Entrena. Lucha. Crece.</h1>
-          <p class="text-base xl:text-3xl mb-6">Reserva tu primera introducción al Jiu Jitsu brasileño.</p>
-          <a href="#contact" class="px-6 py-3 bg-white text-black font-semibold rounded-md">Reserva</a>
-        </div>
+  <!-- Text section UNDER the video -->
+  <Layout title="Method">
+    <AnimatedSection
+      className="relative z-10 flex items-center justify-center h-screen text-center text-white bg-[#1b1b1b]"
+      client:visible
+    >
+      <div>
+        <h1 class="xl:text-8xl text-6xl font-bold mb-4">
+          Entrena. Lucha. Crece.
+        </h1>
+        <p class="text-base xl:text-3xl mb-6">
+          Reserva tu primera introducción al Jiu Jitsu brasileño.
+        </p>
+        <a
+          href="#contact"
+          class="px-6 py-3 bg-white text-black font-semibold rounded-md"
+        >
+          Reserva
+        </a>
       </div>
-    </section> -->
+    </AnimatedSection>
+  </Layout>
+  <Layout title="Carousel">
+    <div class="p-10 bg-black flex justify-center">
+      <AnimatedCarousel
+        client:load
+        columns={[
+          [
+            "/gallery/1.webp",
+            "/gallery/2.webp",
+            "/gallery/3.webp",
+            "/gallery/4.webp",
+            "/gallery/5.webp",
+            "/gallery/6.webp",
+            "/gallery/7.jpeg",
+            "/gallery/8.jpeg",
+          ], // column 1
+          [
+            "/gallery/17.webp",
+            "/gallery/18.webp",
+            "/gallery/19.webp",
+            "/gallery/20.webp",
+            "/gallery/21.webp",
+            "/gallery/22.webp",
+            "/gallery/23.webp",
+            "/gallery/24.webp",
+            "/gallery/25.webp",
+            "/gallery/26.webp",
+            "/gallery/27.webp",
+          ], // column 2
+          [
+            "/gallery/9.webp",
+            "/gallery/10.webp",
+            "/gallery/11.webp",
+            "/gallery/12.webp",
+            "/gallery/13.webp",
+            "/gallery/14.webp",
+            "/gallery/15.webp",
+            "/gallery/16.webp",
+          ], // column 3
+        ]}
+      />
+    </div>
+  </Layout>
+</Layout>

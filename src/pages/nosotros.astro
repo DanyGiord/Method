@@ -1,7 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import AnimatedCarousel from "../components/AnimatedCarousel.tsx";
 ---
 
-<Layout title="Sobre nosotros">
-  <h1>Sobre nosotros</h1>
+<Layout title="Carousel">
+  <div class="p-10 bg-black flex justify-center">
+    <AnimatedCarousel
+      client:load
+      columns={[
+        ["/bjj.webp", "/bjj.webp", "/bjj.webp"], // column 1
+        ["/bjj.webp", "/bjj.webp", "/bjj.webp"], // column 2
+        ["/bjj.webp", "/bjj.webp", "/bjj.webp"], // column 3
+      ]}
+    />
+  </div>
 </Layout>

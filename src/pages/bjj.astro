@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import AnimatedTitle from "../components/AnimatedTitle.tsx";
 ---
 
 <Layout title="Brazilian Jiu Jitsu">
@@ -9,11 +10,16 @@ import Layout from "../layouts/Layout.astro";
   >
     <!-- Overlay (dark gradient to make text readable) -->
     <div class="absolute inset-0 bg-black/50"></div>
+
+    <!-- Animated Title -->
     <div class="h-full w-full flex items-center justify-center bg-black/30">
-      <h1 class="text-white xl:text-9xl text-6xl font-bold text-center z-10">
-        BRAZILIAN JIU JITSU
-      </h1>
+      <AnimatedTitle
+        text="Brazilian Jiu Jitsu"
+        className="text-white xl:text-9xl text-7xl mx-20"
+        client:load
+      />
     </div>
+    
     <!-- Scroll down button -->
     <div class="container_mouse">
       <span class="mouse-btn">
