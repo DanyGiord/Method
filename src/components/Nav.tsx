@@ -43,7 +43,7 @@ export default function Nav() {
             WRESTLING
           </a>
           <a href="/horario" className="cursor-pointer">
-            HORARIO Y PRECIOS
+            HORARIOS
           </a>
           <a href="/nosotros" className="cursor-pointer">
             SOBRE NOSOTROS
@@ -93,7 +93,7 @@ export default function Nav() {
               variants={itemMotion}
               className="cursor-pointer font-bold"
             >
-              HORARIO Y PRECIOS
+              HORARIOS
             </motion.a>
             <motion.a
               href="/nosotros"

@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import AnimatedSection from "../components/AnimatedSection.tsx";
 import AnimatedCarousel from "../components/AnimatedCarousel.tsx";
+import TeamMedals from "../components/TeamMedals.tsx";
 ---
 
 <Layout title="Method">
@@ -41,19 +42,19 @@ import AnimatedCarousel from "../components/AnimatedCarousel.tsx";
           Entrena. Lucha. Crece.
         </h1>
         <p class="text-base xl:text-3xl mb-6">
-          Reserva tu primera introducción al Jiu Jitsu brasileño.
+          ¡Asiste a tu primera clase gratis YA!
         </p>
         <a
           href="#contact"
           class="px-6 py-3 bg-white text-black font-semibold rounded-md"
         >
-          Reserva
+          Contacto
         </a>
       </div>
     </AnimatedSection>
   </Layout>
   <Layout title="Carousel">
-    <div class="p-10 bg-black flex justify-center">
+    <div class="p-10 bg-[#f9f9f9] flex justify-center">
       <AnimatedCarousel
         client:load
         columns={[
@@ -93,5 +94,8 @@ import AnimatedCarousel from "../components/AnimatedCarousel.tsx";
         ]}
       />
     </div>
+  </Layout>
+  <Layout title="Method">
+    <TeamMedals client:load />
   </Layout>
 </Layout>
