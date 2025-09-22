@@ -44,7 +44,7 @@ const { title } = Astro.props;
     <main>
       <slot />
     </main>
-       <Footer />
+    <Footer />
   </body>
 </html>
 <style is:global>
@@ -66,17 +66,17 @@ const { title } = Astro.props;
       monospace;
   }
   .container_mouse {
-  text-align: center;
-  color: gray;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding-top: 2rem;
-  cursor: pointer;
-  position: absolute;
-  bottom: 5px;
-  left: 50%;
-  transform: translateX(-50%); /* Centers it horizontally */
-}
+    text-align: center;
+    color: gray;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-top: 2rem;
+    cursor: pointer;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%); /* Centers it horizontally */
+  }
 
   .container_mouse .mouse-btn {
     margin: 10px auto;
@@ -107,5 +107,22 @@ const { title } = Astro.props;
       opacity: 1;
       transform: translateY(20px);
     }
+  }
+  .parallax {
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: white;
+    letter-spacing: -2px;
+    line-height: 0.8;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  .scroller {
+    display: inline-flex;
+    gap: 3rem; /* space between repeated spans */
+    font-size: 6.5rem; /* adjust to taste */
+    font-weight: 900;
+    will-change: transform; /* optimization */
   }
 </style>

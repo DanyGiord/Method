@@ -86,7 +86,7 @@ export default function TeamMedals() {
             >
               {/* Medal Icon */}
               <motion.div
-                className="w-24 h-24 rounded-full flex items-center justify-center shadow-lg mb-4 text-black text-4xl"
+                className="w-16 h-16 md:h-24 md:w-24 rounded-full flex items-center justify-center shadow-lg mb-4 text-black text-4xl"
                 style={{ backgroundColor: medal.color }}
                 initial={{ scale: 0 }}
                 animate={{ scale: [0, 1.2, 1] }}

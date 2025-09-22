@@ -32,64 +32,64 @@ import TeamMedals from "../components/TeamMedals.tsx";
   </section>
 
   <!-- Text section UNDER the video -->
-    <AnimatedSection
-      className="relative z-10 flex items-center justify-center h-screen text-center text-white bg-[#1b1b1b]"
-      client:visible
-    >
-      <div>
-        <h1 class="xl:text-8xl text-6xl font-bold mb-4">
-          Entrena. Lucha. Crece.
-        </h1>
-        <p class="text-base xl:text-3xl mb-6">
-          ¡Asiste a tu primera clase gratis YA!
-        </p>
-        <a
-          href="#contact"
-          class="px-6 py-3 bg-white text-black font-semibold rounded-md"
-        >
-          Contacto
-        </a>
-      </div>
-    </AnimatedSection>
-    <div class="p-10 bg-[#f9f9f9] flex justify-center">
-      <AnimatedCarousel
-        client:load
-        columns={[
-          [
-            "/gallery/1.webp",
-            "/gallery/2.webp",
-            "/gallery/3.webp",
-            "/gallery/4.webp",
-            "/gallery/5.webp",
-            "/gallery/6.webp",
-            "/gallery/7.jpeg",
-            "/gallery/8.jpeg",
-          ], // column 1
-          [
-            "/gallery/17.webp",
-            "/gallery/18.webp",
-            "/gallery/19.webp",
-            "/gallery/20.webp",
-            "/gallery/21.webp",
-            "/gallery/22.webp",
-            "/gallery/23.webp",
-            "/gallery/24.webp",
-            "/gallery/25.webp",
-            "/gallery/26.webp",
-            "/gallery/27.webp",
-          ], // column 2
-          [
-            "/gallery/9.webp",
-            "/gallery/10.webp",
-            "/gallery/11.webp",
-            "/gallery/12.webp",
-            "/gallery/13.webp",
-            "/gallery/14.webp",
-            "/gallery/15.webp",
-            "/gallery/16.webp",
-          ], // column 3
-        ]}
-      />
+  <AnimatedSection
+    className="relative z-10 flex items-center justify-center h-screen text-center text-white bg-[#1b1b1b]"
+    client:visible
+  >
+    <div>
+      <h1 class="xl:text-8xl text-6xl font-bold mb-4">
+        Entrena. Lucha. Crece.
+      </h1>
+      <p class="text-base xl:text-3xl mb-6">
+        ¡Asiste a tu primera clase gratis YA!
+      </p>
+      <a
+        href="#contact"
+        class="px-6 py-3 bg-white text-black font-semibold rounded-md"
+      >
+        Contacto
+      </a>
     </div>
-    <TeamMedals client:load />
+  </AnimatedSection>
+  <div class="p-10 bg-[#f9f9f9] flex justify-center">
+    <AnimatedCarousel
+      client:load
+      columns={[
+        [
+          "/gallery/1.webp",
+          "/gallery/2.webp",
+          "/gallery/3.webp",
+          "/gallery/4.webp",
+          "/gallery/5.webp",
+          "/gallery/6.webp",
+          "/gallery/7.jpeg",
+          "/gallery/8.jpeg",
+        ], // column 1
+        [
+          "/gallery/17.webp",
+          "/gallery/18.webp",
+          "/gallery/19.webp",
+          "/gallery/20.webp",
+          "/gallery/21.webp",
+          "/gallery/22.webp",
+          "/gallery/23.webp",
+          "/gallery/24.webp",
+          "/gallery/25.webp",
+          "/gallery/26.webp",
+          "/gallery/27.webp",
+        ], // column 2
+        [
+          "/gallery/9.webp",
+          "/gallery/10.webp",
+          "/gallery/11.webp",
+          "/gallery/12.webp",
+          "/gallery/13.webp",
+          "/gallery/14.webp",
+          "/gallery/15.webp",
+          "/gallery/16.webp",
+        ], // column 3
+      ]}
+    />
+  </div>
+  <TeamMedals client:load />
 </Layout>

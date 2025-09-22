@@ -21,7 +21,7 @@ const item = {
 
 export default function BjjTextSection() {
   return (
-    <section className="relative bg-[#1b1b1b] text-white h-screen flex items-center my-20">
+    <section className="relative bg-[#1b1b1b] text-white h-screen flex items-center my">
       <div className="max-w-7xl mx-auto w-full px-6 xl:px-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
